@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'newapp',
 ]
 
 MIDDLEWARE = [
@@ -42,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'celery.urls'
+ROOT_URLCONF = 'djcelery.urls'
 
 TEMPLATES = [
     {
@@ -59,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'celery.wsgi.application'
+WSGI_APPLICATION = 'djcelery.wsgi.application'
 
 
 # Database
