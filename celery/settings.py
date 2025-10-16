@@ -16,6 +16,11 @@ DEBUG = os.environ.get("DEBUG")
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(",")
 
 
+# redis://redis:6379/0  le deuxieme redis //redis:6379/0 est les nom de ntre container definit ds docker compose 6379 port par défaut et 0 redis database number ou l'index 
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER", "redis://redis:6379/0")
+CELERY_RESULT_BACKEND = os.environ.get("CELERY_BACKEND", "redis://redis:6379/0")
+
+
 # Application definition
 
 INSTALLED_APPS = [
